@@ -1,5 +1,7 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_riverpod_blog_start/core/constants/http.dart';
 import 'package:flutter_riverpod_blog_start/model/user/user.dart';
+import 'package:logger/logger.dart';
 
 final sessionProvider = Provider<SessionUser>((ref) {
   return SessionUser();
@@ -21,9 +23,11 @@ class SessionUser {
     this.isLogin = true;
   }
 
-  void logoutSuccess(){
+  Future<void> logoutSuccess() async {
     this.user = null;
     this.jwt = null;
     this.isLogin = false;
+    await secureStorage.delete(key: "jwt");
+    Logger().d("세션 종료 및 디바이스 JWT 삭제");
   }
 }

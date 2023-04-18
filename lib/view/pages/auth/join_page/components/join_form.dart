@@ -38,7 +38,7 @@ class JoinForm extends ConsumerWidget {
             text: "회원가입",
             funPageRoute: () {
               if (_formKey.currentState!.validate()) {
-              ref.read(UserControllerProvider).join(_username.text.trim(),
+              ref.read(userControllerProvider).join(_username.text.trim(),
                   _password.text.trim(),
                   _email.text.trim()
               );
