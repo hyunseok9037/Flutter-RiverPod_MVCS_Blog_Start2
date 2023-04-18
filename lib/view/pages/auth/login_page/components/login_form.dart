@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_riverpod_blog_start/controller/user_controller.dart';
+import 'package:flutter_riverpod_blog_start/core/constants/move.dart';
 import 'package:flutter_riverpod_blog_start/core/utils/validator_util.dart';
 import 'package:flutter_riverpod_blog_start/model/auth/user_Repository.dart';
 import 'package:flutter_riverpod_blog_start/view/components/custom_elevated_button.dart';
@@ -41,13 +42,13 @@ class LoginForm extends ConsumerWidget {
           ),
           TextButton(
             onPressed: () {
-
+            Navigator.popAndPushNamed(context, Move.joinPage);
             },
             child: const Text("아직 회원가입이 안되어 있나요?"),
           ),
           TextButton(
             onPressed: () {
-
+              Navigator.popAndPushNamed(context, Move.postHomePage);
             },
             child: const Text("홈페이지 로그인 없이 가보는 테스트"),
           ),

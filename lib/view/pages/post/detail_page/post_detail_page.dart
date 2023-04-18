@@ -9,7 +9,7 @@ class PostDetailPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      body: PostDetailBody(),
+      body: PostDetailBody(postId),
     );
   }
 

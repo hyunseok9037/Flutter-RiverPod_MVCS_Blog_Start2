@@ -4,15 +4,15 @@ import 'package:flutter_riverpod_blog_start/view/pages/post/update_page/componen
 import 'package:logger/logger.dart';
 
 class PostUpdatePage extends StatelessWidget {
-
-  PostUpdatePage({super.key});
+  final post;
+  PostUpdatePage(this.post,{super.key});
 
   @override
   Widget build(BuildContext context) {
     Logger().d("UpdatePage");
     return Scaffold(
       appBar: AppBar(),
-      body: PostUpdateBody(),
+      body: PostUpdateBody(post),
     );
   }
 }

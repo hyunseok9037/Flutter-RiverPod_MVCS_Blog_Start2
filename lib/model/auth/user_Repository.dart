@@ -1,7 +1,7 @@
 
 import 'package:dio/dio.dart';
 import 'package:flutter_riverpod_blog_start/core/constants/http.dart';
-import 'package:flutter_riverpod_blog_start/dto/auth_request.dart';
+import 'package:flutter_riverpod_blog_start/dto/user_request.dart';
 import 'package:flutter_riverpod_blog_start/dto/response_dto.dart';
 import 'package:flutter_riverpod_blog_start/model/user/user.dart';
 import 'package:flutter_riverpod_blog_start/provider/session_provider.dart';

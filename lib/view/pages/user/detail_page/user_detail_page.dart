@@ -14,5 +14,4 @@ class UserDetailPage extends StatelessWidget {
     );
   }
 
-
 }

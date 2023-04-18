@@ -6,6 +6,7 @@ import 'package:flutter_riverpod_blog_start/view/pages/post/write_page/post_writ
 import 'package:flutter_riverpod_blog_start/view/pages/user/detail_page/user_detail_page.dart';
 
 class Move {
+  Move.single();
   static String postHomePage = "/post/home";
   static String postWritePage = "/post/write";
   static String joinPage = "/join";
